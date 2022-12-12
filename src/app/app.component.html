@@ -1,3 +1,18 @@
+<h2>Events in Angular</h2>
 
+<button (click)="getName('Neel shah')">Click Me</button>
 
+<br /><br />
+<input type="text" #box (keyup)="getData(box.value)" placeholder="event keyup" />
+
+<br /><br />
+<input type="text" #box2 (keydown)="getData(box2.value)" placeholder="event keydown" />
+
+<br /><br />
+<input type="text" #box3 (blur)="getData(box3.value)" placeholder="event blur" />
+
+<br /><br />
+<input type="text" #box4 (input)="getData(box4.value)" placeholder="event input" />
+
+<h1 (mouseover)="getData('mouse hover')">Mouse hover event</h1>
 <router-outlet></router-outlet>

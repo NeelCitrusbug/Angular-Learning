@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+  
+  getName(name:string){
+    alert('name: ' + name)
+  }
+
+  getData(val:string){
+    console.log(val)
+  }
 }
