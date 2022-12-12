@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.heading-global{
+    color:green;
+}
+
+.heading-internal{
+    color: green;
+}
+
+.heading-component{
+    color:green;
+}
