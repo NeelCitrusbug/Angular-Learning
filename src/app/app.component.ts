@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+  show = false;
+  color = 'blue';
+  switchColor = 'red';
 }

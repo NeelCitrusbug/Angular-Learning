@@ -1,3 +1,37 @@
+<h1>Conditions</h1>
 
+<p *ngIf="show; then ifBlock else elseBlock"></p>
 
+<!-- if else -->
+<ng-template #ifBlock>
+    <h1>If block</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>Else block</h1>
+</ng-template>
+
+<!-- else if -->
+<ng-template [ngIf]="color==='red'">
+    <h1 style="color:red;">Red color</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='green'">
+    <h1 style="color:green;">Green color</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='blue'">
+    <h1 style="color:blue;">Blue color</h1>
+</ng-template>
+
+<!-- switch case -->
+<br /><br />
+<h1>Switch case</h1>
+<div [ngSwitch]="switchColor">
+    <h1 *ngSwitchCase="'red'" style="color:red;">Red color</h1>
+    <h1 *ngSwitchCase="'green'" style="color:green;">Green color</h1>
+    <h1 *ngSwitchCase="'blue'" style="color:blue;">Blue color</h1>
+    <h1 *ngSwitchCase="'brown'" style="color:brown;">Brown color</h1>
+    <h1 *ngSwitchDefault style="color:purple;">Other color</h1>
+</div>
 <router-outlet></router-outlet>
