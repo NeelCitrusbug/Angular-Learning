@@ -16,3 +16,18 @@
 
 <h1 (mouseover)="getData('mouse hover')">Mouse hover event</h1>
 <router-outlet></router-outlet>
+
+<br /><br />
+<h1>Update value on input</h1>
+<br /><br />
+<input type="text" #boxinput (input)="updateValue(boxinput.value)" placeholder="enter value" />
+<p>Entered value is {{displayVal}} </p>
+
+
+<br /><br />
+<h1>Update value on click</h1>
+<br /><br />
+<input type="text" #boxinput2  placeholder="enter value" />
+<button (click)="updateValue(boxinput2.value)">Show</button>
+
+<p>Entered value is {{displayVal}} </p>
