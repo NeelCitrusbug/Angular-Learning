@@ -1,3 +1,13 @@
+<h1>Property Binding</h1>
 
+<!-- with interpolation -->
+<!-- It only supports string and numeric values -->
+<input type="text" name="name1" value="{{name}}" disabled="{{disable}}" >
+
+<br /><br />
+
+<!-- with property binding -->
+<!-- it supports boolean value -->
+<input type="text" name="name1" [value]=name [disabled] = disable>
 
 <router-outlet></router-outlet>
