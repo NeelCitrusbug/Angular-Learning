@@ -1,3 +1,4 @@
+<!-- Events start -->
 <h2>Events in Angular</h2>
 
 <button (click)="getName('Neel shah')">Click Me</button>
@@ -15,15 +16,17 @@
 <input type="text" #box4 (input)="getData(box4.value)" placeholder="event input" />
 
 <h1 (mouseover)="getData('mouse hover')">Mouse hover event</h1>
-<router-outlet></router-outlet>
 
+<!-- Events end -->
+
+<!-- Update value on input -->
 <br /><br />
 <h1>Update value on input</h1>
 <br /><br />
 <input type="text" #boxinput (input)="updateValue(boxinput.value)" placeholder="enter value" />
 <p>Entered value is {{displayVal}} </p>
 
-
+<!-- Update value on click -->
 <br /><br />
 <h1>Update value on click</h1>
 <br /><br />
@@ -31,3 +34,10 @@
 <button (click)="updateValue(boxinput2.value)">Show</button>
 
 <p>Entered value is {{displayVal}} </p>
+
+<!-- Counter -->
+<br />
+
+<app-counter></app-counter>
+
+<router-outlet></router-outlet>
