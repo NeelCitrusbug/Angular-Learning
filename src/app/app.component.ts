@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+
+  onSubmit(val:any){
+    console.warn(val)
+  }
 }

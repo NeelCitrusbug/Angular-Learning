@@ -1,3 +1,15 @@
+<h1>Template driven form</h1>
 
+<form #templateform="ngForm" (ngSubmit)="onSubmit(templateform.value)">
+    <input #name ngModel type="text" pattern="[a-zA-Z]+$" required name="name" placeholder="enter username">
+    <br/>
+    <span *ngIf="templateform.controls['name'].invalid && templateform.controls['name'].touched" style="color:red;">Enter valid input</span>
+    <br/><br/>
+    <input #password ngModel type="password" required minlength="5" name="password" placeholder="enter password">
+    <br/>
+    <span *ngIf="templateform.controls['password'].invalid && templateform.controls['password'].touched" style="color:red;">Enter valid input</span>
+    <br/><br/>
+    <button [disabled]="templateform.invalid">Submit</button>
+</form>
 
 <router-outlet></router-outlet>
