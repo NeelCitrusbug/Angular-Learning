@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+  data = 'default'
+  updateData(val:any){
+    this.data = val;
+  }
 }
