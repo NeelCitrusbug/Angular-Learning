@@ -1,3 +1,20 @@
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{title | lowercase | titlecase}}</h1>
 
+<h1>{{title | slice : 1 : 8 }}</h1>
 
+<h1>{{today | date}}</h1>
+<h1>{{today | date : 'fullDate'}}</h1>
+
+<h1>{{user | json}}</h1>
+<h1>{{user | json | uppercase}}</h1>
+
+<!-- {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+<h1>{{ 7000000000000.81258125 | number : '4.2-5' }}</h1>
+
+<h1>{{5000 | currency : 'INR'}}</h1>
+
+<!-- Custom pipe -->
+<h1>{{3 | multiPlier : 15}}</h1>
 <router-outlet></router-outlet>
