@@ -1,3 +1,8 @@
+<h1 [style.color]="color" [style.backgroundColor]="'lightgrey'">Dynamic style</h1>
 
+<input type="text" name="color" placeholder="Enter color" #box>
+
+<br/><br/>
+<button (click)="updateColor(box.value)">Update color</button>
 
 <router-outlet></router-outlet>
