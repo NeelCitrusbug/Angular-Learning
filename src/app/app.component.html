@@ -1,3 +1,7 @@
+<h1>Parent to child</h1>
 
+<ul *ngFor="let user of userDetails">
+    <app-user-detail [userdata]="user"></app-user-detail>
+</ul>
 
 <router-outlet></router-outlet>
