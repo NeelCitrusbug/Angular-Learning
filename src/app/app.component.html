@@ -1,3 +1,17 @@
+<h1>Basic routing</h1>
 
+<a routerLink="">Home</a>
+<br/>
+<a routerLink="about">About</a>
+<br/>
+<a routerLink="user">User</a>
+<br/>
 
+<br/><br/>
+<a routerLink="user/1">User1</a>
+<br/>
+<a [routerLink]="['/user', 2]">User2</a>
+<br/>
+<a routerLink="user/3">User3</a>
+<br/>
 <router-outlet></router-outlet>
