@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {userDataType} from './user.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+
+  getData(){
+    const data:userDataType = {
+      name:'neel',
+      married:false,
+      id:1,
+      address:'ahmedabad'
+    }
+    return data;
+  }
 }
