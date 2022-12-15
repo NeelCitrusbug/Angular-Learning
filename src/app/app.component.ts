@@ -7,7 +7,7 @@ import {SamplePostsService} from './services/sample-posts.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Services and api integration';
+  title = 'Angular interceptor';
   posts:any;
 
   constructor(private postService:SamplePostsService) {
