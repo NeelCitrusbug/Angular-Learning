@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Observer, of, from } from 'rxjs';
+import { Observable, Observer, of, from, interval } from 'rxjs';
 import {map, filter} from 'rxjs/operators';
 
 @Component({
@@ -47,14 +47,36 @@ export class AppComponent implements OnInit {
   //   return val >= 15
   // }))
 
+  counterObs = interval(1000)
+  counterSub:any;
+
+  finalCounterSub:any = [];
+
   ngOnInit() {
     // 3 callback function params: (next,error,complete)
-    this.transformedObs.subscribe((val)=>{
-      console.log(val)
-    },(error:any) => {
-      alert(error.message)
-    }, () => {
-      alert('observer has complete emitting all values.')
+    
+    // this.transformedObs.subscribe((val)=>{
+    //   console.log(val)
+    // },(error:any) => {
+    //   alert(error.message)
+    // }, () => {
+    //   alert('observer has complete emitting all values.')
+    // })
+
+    
+  
+  }
+
+  unSubscribe(){
+    // this.counterSub.unsubscribe()
+
+    this.finalCounterSub.forEach((subscription:any) => subscription.unsubscribe())
+  }
+
+  subScribe(){
+    this.counterSub = this.counterObs.subscribe((val)=>{
+      console.warn(val)
     })
+    this.finalCounterSub.push(this.counterSub)
   }
 }
