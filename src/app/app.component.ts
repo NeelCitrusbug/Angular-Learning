@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'practice';
 
   user={
-    name:'',
-    password:''
+    name:'neel',
+    password:'Neel@1234'
   };
 
   onSubmit(val:any){
