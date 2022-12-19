@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'practice';
 
+  user={
+    name:'',
+    password:''
+  };
+
   onSubmit(val:any){
     console.warn(val)
   }
