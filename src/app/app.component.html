@@ -1,3 +1,12 @@
+<ng-container [formGroup]="userForm">
+	<app-basic-info formGroupName="basicInfo"></app-basic-info>
 
+	<app-address formGroupName="address"></app-address>
+
+    <br/>
+    <button [disabled]="userForm.invalid" (click) = "onSubmit(userForm.value)">Submit</button>
+<br/>
+{{ userForm.value | json}}
+</ng-container>
 
 <router-outlet></router-outlet>

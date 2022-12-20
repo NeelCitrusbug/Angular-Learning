@@ -1,0 +1,74 @@
+<form [formGroup]="form">
+    <div class="form-container" >
+      <h2>Address</h2>
+  
+      <!-- Street -->
+      <div>
+        <span>Street</span>
+        <br/><br/>
+        <input type="text"  placeholder="Ex. NY street" formControlName="street" />
+        <div  *ngIf="street && street.touched && street.invalid">
+            <span *ngIf="street.errors?.['required']" class="error">Street is required</span>
+        </div>
+        <br/><br/>
+    </div>
+      <!-- /Street -->
+  
+      <!-- number -->
+      <div>
+        <span>number</span>
+        <br/><br/>
+        <input type="number"  placeholder="56" formControlName="number" />
+        <div  *ngIf="number && number.touched && number.invalid">
+            <span *ngIf="number.errors?.['required']" class="error">number is required</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /number -->
+  
+      <!-- postal -->
+      <div>
+        <span>postal</span>
+        <br/><br/>
+        <input type="number"  placeholder="382266" formControlName="postal" />
+        <div  *ngIf="postal && postal.touched && postal.invalid">
+            <span *ngIf="postal.errors?.['required']" class="error">Postal is required</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /postal -->
+  
+      <!-- company -->
+      <div>
+        <span>Company</span>
+        <br/><br/>
+        <input type="text"  placeholder="Ex. CB" formControlName="company" />
+        <div  *ngIf="company && company.touched && company.invalid">
+            <span *ngIf="company.errors?.['required']" class="error">Company is required</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /company -->
+
+      <!-- city -->
+      <div>
+        <span>Choose City</span>
+        <br/><br/>
+        <select
+          class="custom-select mb-3"
+          (change)="changeCity($event)"
+          formControlName="cityName"
+        >
+          <option value="">Choose City</option>
+          <option *ngFor="let city of City" [ngValue]="city">
+            {{ city }}
+          </option>
+        </select>
+        <div  *ngIf="cityName && cityName.touched && cityName.invalid">
+            <span *ngIf="cityName.errors?.['required']" class="error">City is required</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /city -->
+    </div>
+  </form>

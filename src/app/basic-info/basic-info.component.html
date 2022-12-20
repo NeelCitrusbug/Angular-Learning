@@ -1,0 +1,56 @@
+<form [formGroup]="form">
+    <div class="form-container" >
+      <h2>Basic Info</h2>
+  
+      <!-- First name -->
+      <div>
+        <span>First name</span>
+        <br/><br/>
+        <input  placeholder="Ex. Jane" formControlName="firstName" />
+        <div  *ngIf="firstName && firstName.touched && firstName.invalid">
+            <span *ngIf="firstName.errors?.['required']" class="error">First name is required</span>
+            <span *ngIf="firstName.errors?.['minlength']" class="error">First name must be at least 3 characters long</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /First name -->
+  
+      <!-- Last name -->
+      <div>
+        <span>Last name</span>
+        <br/><br/>
+        <input  placeholder="Ex. Doe" formControlName="lastName" />
+        <div  *ngIf="lastName && lastName.touched && lastName.invalid">
+            <span *ngIf="lastName.errors?.['required']" class="error">Last name is required</span>
+            <span *ngIf="lastName.errors?.['minlength']" class="error">Last name must be at least 3 characters long</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /Last name -->
+  
+      <!-- email -->
+      <div>
+        <span>e-mail</span>
+        <br/><br/>
+        <input type="email"  placeholder="Ex. jane@doe.com" formControlName="email" />
+        <div  *ngIf="email && email.touched && email.invalid">
+            <span *ngIf="email.errors?.['required']" class="error">email is required</span>
+            <span *ngIf="email.errors?.['email']" class="error">Email is invalid</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /email -->
+  
+      <!-- age -->
+      <div>
+        <span>Age</span>
+        <br/><br/>
+        <input type="number"  placeholder="Ex. 43" formControlName="age" />
+        <div  *ngIf="age && age.touched && age.invalid">
+            <span *ngIf="age.errors?.['required']" class="error">Age is required</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /age -->
+    </div>
+  </form>
