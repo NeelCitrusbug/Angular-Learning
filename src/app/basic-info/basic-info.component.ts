@@ -29,5 +29,8 @@ export class BasicInfoComponent implements OnInit{
   get age(){
     return this.form.get('age')
   }
+  get birthDate(){
+    return this.form.get('birthDate')
+  }
 
 }

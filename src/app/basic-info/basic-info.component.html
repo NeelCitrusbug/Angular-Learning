@@ -52,5 +52,19 @@
         <br/><br/>
       </div>
       <!-- /age -->
+
+      <!-- birthDate -->
+      <div>
+        <span>BirthDate</span>
+        <br/><br/>
+        <input type="date"  formControlName="birthDate" />
+        <div  *ngIf="birthDate && birthDate.touched && birthDate.invalid">
+            <span *ngIf="birthDate.errors?.['required']" class="error">birthDate is required</span>
+            <span *ngIf="birthDate.errors?.['invalidBirthDate']" class="error">birthDate must not be future date</span>
+        </div>
+        <br/><br/>
+      </div>
+      <!-- /birthDate -->
+
     </div>
   </form>

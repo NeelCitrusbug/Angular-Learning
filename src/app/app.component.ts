@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import {Subscription} from 'rxjs'
-
+import { ValidateBirthDate } from 'src/shared/birthdate.validator';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,7 +21,8 @@ export class AppComponent implements OnInit, OnDestroy {
         firstName: ['',[Validators.required,Validators.minLength(3)]],
         lastName: ['shah',[Validators.required,Validators.minLength(3)]],
         email: ['',[Validators.required,Validators.email]],
-        age: []
+        age: [],
+        birthDate:['',[ValidateBirthDate]]
       }),
       address: this.fb.group({
         street: ['',[Validators.required]],
