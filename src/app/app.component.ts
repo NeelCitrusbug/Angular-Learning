@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+  users:any;
+
+  constructor(private userService:UserService) {
+    this.users = userService.getUsers();
+  }
+
+  onUpdate(val:any) {
+    this.userService.updateUser(val.id,val.email)
+  }
 }
