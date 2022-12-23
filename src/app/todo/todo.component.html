@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Todo using redux in angular!</h2>
+    <input [(ngModel)]="todo">
+    <button [disabled]="todo?.length === 0" color="success" fill="outline" (click)="addTodo()"
+      >Add Todo</button
+    >
+
+    <ul>
+      <li style="line-height:3" *ngFor="let todo of allTodos$ | async">
+          <label> {{ todo.content }} </label>
+          <button (click)="removeTodo(todo)" class="delete">delete</button>
+        </li>
+    </ul>
+  </div>
